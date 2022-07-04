@@ -2,7 +2,7 @@ let port=process.env.PORT;
 if(port==null || port==""){
     port=4000;
 }
-const io = require('socket.io')(8000)
+const io = require('socket.io')(5000)
 
 const users = {};
 
