@@ -1,4 +1,8 @@
-const io = require('socket.io')(8000)
+let port=process.env.PORT;
+if(port==null || port==""){
+    port=4000;
+}
+const io = require('socket.io')(port)
 
 const users = {};
 
@@ -28,10 +32,7 @@ const app=new express()
 const fs=require('fs')
 app.use(express.static('public'))
 
-let port=process.env.PORT;
-if(port==null || port==""){
-    port=4000;
-}
+
 const homePage=fs.readFileSync('index.html')
 app.get('/',(req,res)=>{
     res.end(homePage)
