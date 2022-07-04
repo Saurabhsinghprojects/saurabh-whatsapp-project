@@ -1,4 +1,4 @@
-const socket = io('https://saurabh-whatsapp.herokuapp.com:5000/');
+const socket = io('https://saurabh-whatsapp.herokuapp.com');
 
 
 const form = document.getElementById('send-container');
