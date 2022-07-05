@@ -1,4 +1,4 @@
-var socket = io('https://saurabh-whatsapp.herokuapp.com:5000/', { transports: ['websocket', 'polling', 'flashsocket'] });
+var socket = io('http://saurabh-whatsapp.herokuapp.com:5000/');
 
 
 const form = document.getElementById('send-container');
